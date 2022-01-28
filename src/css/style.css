@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+*::before, *::after {
+    box-sizing: border-box
+}
+
+#demo {
+    position: fixed;
+    height: 50vh;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 5px solid #1FABEC;
+    overflow-y: auto; /* 用户可以滚动 */
+}
+
+#demo2 {
+    display: none;
+}
+
+#demo::-webkit-scrollbar {
+    display: none; /* 看起来不丑 */
+}
+
+#template {
+    background: #1FABEC;
+    height: 50vh;
+}
+
+#template #center {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+
+#template .head {
+    position: center;
+}
+
+#buttons {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    bottom: 10vh;
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+#buttons > button {
+    margin-bottom: 10px;
+    padding: 4px 8px;
+    border: none;
+    background: #1FABEC;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
